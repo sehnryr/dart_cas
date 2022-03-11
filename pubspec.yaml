@@ -1,0 +1,22 @@
+name: dart_cas
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# homepage: https://www.example.com
+publish_to: none
+
+environment:
+  sdk: '>=2.16.1 <3.0.0'
+
+
+dependencies:
+  flutter_secure_storage: ^5.0.2
+  
+  requests:
+    git:
+      url: https://github.com/ianmaciel/requests.git
+      ref: feature/null-safety
+
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.16.0
