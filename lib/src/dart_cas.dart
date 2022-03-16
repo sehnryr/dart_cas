@@ -159,12 +159,10 @@ class CASClientV1 extends CASClientBase {
     var response = await Requests.get(url, verify: verifySslCertificate);
 
     if (response.statusCode == 200) {
-      String content = response.content();
-      int chunkSize = 8192;
-      String verified = content.substring(chunkSize, chunkSize * 2).trim();
+      List<String> spiltContent = response.content().split('\n');
 
-      if (verified == 'yes') {
-        return Tuple3(content.substring(chunkSize * 2, chunkSize * 3), null, null);
+      if (spiltContent.length >= 2 && spiltContent[0].trim() == 'yes') {
+        return Tuple3(spiltContent[1].trim(), null, null);
       } else {
         return Tuple3(null, null, null);
       }
