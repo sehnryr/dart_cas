@@ -14,17 +14,17 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-	dart_cas: ^1.0.0
+  dart_cas: ^1.0.0
 ```
 
 If you want to get it directly from github, add this instead: 
 
 ```yaml
 dependencies:
-	dart_cas:
-		git:
-			url: https://github.com/sehnryr/dart_cas
-			ref: master
+  dart_cas:
+    git:
+      url: https://github.com/sehnryr/dart_cas
+      ref: master
 ```
 
 ## References
