@@ -62,10 +62,10 @@ abstract class CASClientBase {
 
   /// Generates CAS logout URL
   ///
-  /// * [redirectUrl]: The url where the request will be redirected to
+  /// * [redirectUrl]: Optional url where the request will be redirected to
   ///
   /// Returns a [String]
-  String getLogoutUrl(String? redirectUrl) {
+  String getLogoutUrl([String? redirectUrl]) {
     String url = p.join(serverUrl, 'logout');
 
     if (redirectUrl != null) {
